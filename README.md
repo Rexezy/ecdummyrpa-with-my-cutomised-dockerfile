@@ -26,7 +26,7 @@ We provide a docker to make the installation easier.
     
 2. Then install our docker image:
     ```bash
-    docker build -t ecdummyrpa ./ecdummyrpa
+    docker build -t ecdummyrpa .
     ```
     
 3. Now you can run the docker:
