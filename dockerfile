@@ -15,6 +15,12 @@ RUN apt update \
     python3-dev \
     python3-pip \
     wget \
+    libatlas-base-dev\
+    gfortran\
+    libblas3 \
+    liblapack3 \
+    liblapack-dev \
+    libblas-dev \
     && apt clean
 
 
@@ -50,15 +56,21 @@ RUN git clone --branch master https://github.com/fplll/fplll && \
 
 # fpylll
 WORKDIR /root
-RUN git clone --branch master https://github.com/fplll/fpylll && \
+RUN git clone --branch master https://github.com/Rexezy/fpylll && \
     cd fpylll && \
     pip3 install Cython && \
     pip3 install -r requirements.txt && \
     python3 setup.py build && \
     python3 setup.py -q install
-
+    
 # scikit-learn
-RUN pip3 install -U scikit-learn
+RUN pip3 install SciPy && \
+    pip3 install NumPy && \
+    pip3 install joblib && \
+    pip3 install threadpoolctl
+
+
+RUN pip3 install scikit-learn==1.0.1
 
 
 # OpenSSL
