@@ -28,11 +28,13 @@ We provide a docker to make the installation easier.
     ```bash
     docker build -t ecdummyrpa .
     ```
-            OR
-2a. install our docker image with the original docker file:
-    i. Delete the the file named "dockerfile" 
-    ii. And rename the file named "dockerfile old" to "dockerfile"
-    iii. Build our docker image with the samen command below
+OR
+   
+2a. To install our docker image with the original docker file:
+    i.  Delete the the file named "dockerfile" 
+    ii.  And rename the file named "dockerfile old" to "dockerfile"
+    iii.  Build our docker image with the samen command below
+    
     ```bash
     docker build -t ecdummyrpa .
     ```
